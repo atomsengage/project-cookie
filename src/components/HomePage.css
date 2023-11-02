@@ -1,8 +1,9 @@
 /* HomePage.css */
 
+/* ... Previous styles ... */
+
 .home {
     position: relative;
-    text-align: center;
   }
   
   .home-background {
@@ -10,7 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Cover full screen height */
     z-index: -1;
   }
   
@@ -22,9 +23,10 @@
   
   .home-content {
     position: relative;
-    padding: 100px 0;
+    text-align: center;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10vh 0; /* Center vertically */
   }
   
   .home-title {
@@ -36,42 +38,70 @@
     font-size: 24px;
     font-weight: bold;
   }
+
+  .home-mid {
+    position: relative;
+
+  }
   
   .home-cards {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    background:whitesmoke;
+    justify-content: space-between;
+    margin-top: 70vh;
+    padding: 0 10%; /* Add horizontal margin */
   }
   
   .home-card {
     background: #fff;
     padding: 20px;
-    margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 40vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    flex: 1;
+    text-align: center;
+    font-size: 28px; /* Increase font size */
+    margin: 20px; /* Add space between cards */
   }
   
-  .home-card h3 {
-    font-size: 24px;
-    font-weight: bold;
+  .card1 {
+    background: #ffa07a; /* Color for the first card */
   }
   
-  .home-card ul {
-    list-style-type: none;
+  .card2 {
+    background: #00ced1; /* Color for the second card */
   }
   
-  .home-card li::before {
-    content: '\2713'; /* Checkmark symbol */
-    margin-right: 5px;
+  .card3 {
+    background: white; /* Color for the third card */
   }
   
-  button {
-    background: #007BFF;
-    color: #fff;
+  .card-content {
+    margin-bottom: 20px;
+  }
+  
+  .styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .styled-list li::before {
+    content: '\2713'; /* Add a bullet point before each list item */
+    margin-right: 10px;
+  }
+  
+  .home-button {
+    display: block;
+    background: black;
+    color: white;
     padding: 10px 20px;
+    margin: 20px auto;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
   }
+  
+  /* Add styles for the third card */
   

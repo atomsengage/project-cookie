@@ -1,0 +1,30 @@
+/* CuisineTemplate.css */
+
+.cuisine-template {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .cuisine-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+  }
+  
+  .cuisine-image {
+    padding: 10px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .cuisine-image.highlight {
+    opacity: 1;
+  }
+  
+  .cuisine-image.fade {
+    opacity: 0.2;
+  }
