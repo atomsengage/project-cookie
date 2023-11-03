@@ -3,7 +3,7 @@
 .footer {
     background: black;
     color: white;
-    padding: 2% 0;
+    padding: 0px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;

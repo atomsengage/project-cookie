@@ -3,105 +3,154 @@
 /* ... Previous styles ... */
 
 .home {
-    position: relative;
-  }
-  
-  .home-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Cover full screen height */
-    z-index: -1;
-  }
-  
-  .home-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .home-content {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 10vh 0; /* Center vertically */
-  }
-  
-  .home-title {
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .home-subtitle {
-    font-size: 24px;
-    font-weight: bold;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .home-mid {
-    position: relative;
+.home-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
 
-  }
-  
-  .home-cards {
-    display: flex;
-    background:whitesmoke;
-    justify-content: space-between;
-    margin-top: 70vh;
-    padding: 0 10%; /* Add horizontal margin */
-  }
-  
+.home-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-content {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.home-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.home-mid {
+  position: relative;
+}
+
+.home-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Easier spacing */
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-card {
+  background: #fff;
+  padding: 25px 20px 20px 20px;
+  overflow: hidden; /* Ensure no content spills out of the card */
+  border-radius: 10px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  margin: 10px; /* Adjust the margin if you need more space */
+  width: 250px; /* Gives cards a consistent width, subtracting the margin */
+}
+.card-header, .card-body, .card-footer {
+  flex: 1; /* This will make each section take up equal space */
+  width: 100%;  /* Make sure these sections fill the card */
+  padding: 10px 0; /* Add vertical padding for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header h4, .card-header p {
+  margin: 5px 0;
+}
+
+.styled-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.styled-list li {
+  margin: 8px 0;
+  text-align: center;  /* Ensure list items are centered */
+}
+
+.card-footer {
+  margin-top: 15px; /* Push the button to the bottom */
+  width: 100%; /* Ensure the footer fills the width of the card */
+  display: flex;
+  justify-content: center; /* Center the button */
+}
+
+
+.card1 {
+  background: #ffa07a;
+}
+
+.card2 {
+  background: #00ced1;
+}
+
+.card3 {
+  background: white;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.styled-list li::before {
+  content: '\2713';
+  margin-right: 10px;
+}
+
+.home-button {
+  display: block;
+  background: black;
+  color: white;
+  padding: 8px 16px;
+  text-align: center; 
+  font-size: 16px; /* Adjust font size of the button */
+  margin-top: auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .home-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    height: 40vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
-    flex: 1;
-    text-align: center;
-    font-size: 28px; /* Increase font size */
-    margin: 20px; /* Add space between cards */
+      width: 100%; /* On smaller screens, cards take full width */
+      margin: 10px 0; /* Horizontal margin removed for full width */
   }
-  
-  .card1 {
-    background: #ffa07a; /* Color for the first card */
-  }
-  
-  .card2 {
-    background: #00ced1; /* Color for the second card */
-  }
-  
-  .card3 {
-    background: white; /* Color for the third card */
-  }
-  
-  .card-content {
-    margin-bottom: 20px;
-  }
-  
-  .styled-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .styled-list li::before {
-    content: '\2713'; /* Add a bullet point before each list item */
-    margin-right: 10px;
-  }
-  
-  .home-button {
-    display: block;
-    background: black;
-    color: white;
-    padding: 10px 20px;
-    margin: 20px auto;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  /* Add styles for the third card */
-  
+}

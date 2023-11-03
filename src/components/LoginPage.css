@@ -1,0 +1,105 @@
+/* Page background */
+.login-background {
+    background-image: url('C:\Users\himaa\OneDrive\Desktop\project-cookie\public\mexcian.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex; /* To center the login container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Container styling */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.13); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px 35px; /* Added a bit more padding to the sides */
+    border-radius: 10px;
+    align-items: center;
+}
+
+/* Header styling */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif; /* Using the font from the template */
+}
+
+/* Input fields styling */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Lighter border for better visibility */
+    border-radius: 15px;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.07); /* Translucent background for Glassmorphism effect */
+    backdrop-filter: blur(5px); /* Added blur */
+    color: black; /* Light text color */
+    font-family: 'Poppins', sans-serif; /* Using the font from the template */
+}
+
+.login-container input::placeholder {
+    color: #e5e5e5;
+}
+
+/* Button styling */
+.login-container button {
+    margin-top: 20px; /* Added margin to separate button from inputs */
+    width: 50%;
+    padding: 8px;
+    background: linear-gradient(to right, #36D1DC, #5B86E5); /* Gradient background */
+    color: #ffffff; /* White text for better visibility */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* Set to relative for pseudo-elements */
+    overflow: hidden; /* Hide overflowing parts of pseudo-elements */
+    transition: all 0.3s;
+    box-shadow: 0px 4px 15px rgba(54, 209, 220, 0.4); /* Soft shadow for depth */
+}
+
+/* Hover effect for button */
+.login-container button:hover {
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* Reverse gradient on hover */
+    box-shadow: 0px 2px 10px rgba(54, 209, 220, 0.4); /* Reduce shadow depth on hover */
+}
+
+/* Pseudo-element for a ripple effect on hover */
+.login-container button::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place above the button content but below the text */
+    background: rgba(255, 255, 255, 0.1); /* Slight white overlay */
+    opacity: 0; /* Invisible initially */
+    transform: scale(0); /* Scale down initially */
+    transition: all 0.7s; /* Transition for effect duration */
+}
+
+/* Hover effect for ripple */
+.login-container button:hover::before {
+    opacity: 1; /* Make visible on hover */
+    transform: scale(2.5); /* Scale up for ripple effect */
+}
+
+/* Error message styling */
+#error-message {
+    margin-top: 10px;
+    color: red;
+    font-family: 'Poppins', sans-serif; /* Using the font from the template */
+}
